@@ -1,5 +1,30 @@
 {
-    "products": [],
+    "products": [
+        {
+            "id": 1,
+            "name": "Double Bubble",
+            "price": 2.50,
+            "productTypeId": 2
+        },
+        {
+            "id": 2,
+            "name": "Snickers",
+            "price": 3.50,
+            "productTypeId": 3
+        },
+        {
+            "id": 3,
+            "name": "Barq's",
+            "price": 3.00,
+            "productTypeId": 4
+        },
+        {
+            "id": 4,
+            "name": "Senior Candy",
+            "price": 1.00,
+            "productTypeId": 1
+        }
+    ],
     "locations": [
         {
             "id": 1,
@@ -15,6 +40,23 @@
         }
     ],
     "employees": [],
-    "productTypes": [],
+    "productTypes": [
+        {
+            "id": 1,
+            "name": "Hard Candy"
+        },
+        {
+            "id": 2,
+            "name": "Gum"
+        },
+        {
+            "id": 3,
+            "name": "Chocolate"
+        },
+        {
+            "id": 4,
+            "name": "Sodas"
+        }
+    ],
     "customers": []
 }
