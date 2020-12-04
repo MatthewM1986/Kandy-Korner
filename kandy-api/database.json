@@ -1,6 +1,19 @@
 {
     "products": [],
-    "locations": [],
+    "locations": [
+        {
+            "id": 1,
+            "address": "151 Honey Lane",
+            "squareFootage": 1100,
+            "handicapAccesible": true
+        },
+        {
+            "id": 2,
+            "address": "127 Fantasy Drive",
+            "squareFootage": 1500,
+            "handicapAccesible": false
+        }
+    ],
     "employees": [],
     "productTypes": [],
     "customers": []
