@@ -15,11 +15,31 @@ export const LocationList = () => {
         getLocations()
     }, [])
 
+    // old code
+    //     return (
+    //         <div className="locations">
+    //             {
+    //                 locationsArray.map(loc => <LocationHTML key={loc.id} locationObj={loc} />)
+    //             }
+    //         </div>
+    //     )
+    // }
+
     return (
         <div className="locations">
-            {
-                locationsArray.map(loc => <LocationHTML key={loc.id} locationObj={loc} />)
-            }
+            <h1>Locations</h1>
+            <button onClick={() => props.history.push("/locations/create")}>
+                Add Location
+    </button>
+            <article className="locationList">
+                {
+                    locationsArray.map(loc => {
+                        return <Link key={loc.id} to={`/locations/${loc.id}`} >
+                            <h3>{locationLoc.name}</h3>
+                        </Link>
+                    })
+                }
+            </article>
         </div>
     )
 }

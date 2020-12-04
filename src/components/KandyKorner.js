@@ -1,24 +1,23 @@
 import React from "react"
 import { Route, Redirect } from "react-router-dom"
-import { LocationList } from "./locations/LocationList"
-import { LocationProvider } from "./locations/LocationProvider"
-import { ProductList } from "./products/ProductList"
-import { ProductProvider } from "./products/ProductProvider"
+import { NavBar } from "./nav/NavBar"
+import { ApplicationViews } from "./ApplicationViews"
+import "./locations/Location.css"
+import "./products/Product.css"
 
-export const KandyKorner = (props) => {
-    return (
-        <>
-            <h1>Nashville Kennels</h1>
-
-            <h2>Locations</h2>
-            <LocationProvider>
-                <LocationList />
-            </LocationProvider>
-
-            <h2>Products</h2>
-            <ProductProvider>
-                <ProductList />
-            </ProductProvider>
-        </>
-    )
-}
+export const KandyKorner = () => (
+    <>
+        <Route render={() => {
+            if (localStorage.getItem("kandy_customer")) {
+                return (
+                    <>
+                        <Route render={props => <NavBar {...props} />} />
+                        <Route render={props => <ApplicationViews {...props} />} />
+                    </>
+                )
+            } else {
+                return <Redirect to="/login" />
+            }
+        }} />
+    </>
+)
