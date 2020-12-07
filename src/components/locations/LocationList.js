@@ -2,8 +2,9 @@ import React, { useContext, useEffect } from "react"
 import { LocationContext } from "./LocationProvider"
 import { LocationHTML } from "./Location"
 import "./Location.css"
+import { Link } from "react-router-dom"
 
-export const LocationList = () => {
+export const LocationList = (props) => {
     // This state changes when `getLocations()` is invoked below
     const { locationsArray, getLocations } = useContext(LocationContext)
     /*
@@ -15,11 +16,31 @@ export const LocationList = () => {
         getLocations()
     }, [])
 
+    // old code
+    //     return (
+    //         <div className="locations">
+    //             {
+    //                 locationsArray.map(loc => <LocationHTML key={loc.id} locationObj={loc} />)
+    //             }
+    //         </div>
+    //     )
+    // }
+
     return (
         <div className="locations">
-            {
-                locationsArray.map(loc => <LocationHTML key={loc.id} locationObj={loc} />)
-            }
+            <h1>Locations</h1>
+            <button onClick={() => props.history.push("/locations/create")}>
+                Add Location
+    </button>
+            <article className="locationList">
+                {
+                    locationsArray.map(loc => {
+                        return <Link key={loc.id} to={`/locations/${loc.id}`} >
+                            <h3>{loc.name}</h3>
+                        </Link>
+                    })
+                }
+            </article>
         </div>
     )
 }

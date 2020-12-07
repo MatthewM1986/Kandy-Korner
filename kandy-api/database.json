@@ -1,62 +1,69 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Double Bubble",
-            "price": 2.50,
-            "productTypeId": 2
-        },
-        {
-            "id": 2,
-            "name": "Snickers",
-            "price": 3.50,
-            "productTypeId": 3
-        },
-        {
-            "id": 3,
-            "name": "Barq's",
-            "price": 3.00,
-            "productTypeId": 4
-        },
-        {
-            "id": 4,
-            "name": "Senior Candy",
-            "price": 1.00,
-            "productTypeId": 1
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "address": "151 Honey Lane",
-            "squareFootage": 1100,
-            "handicapAccesible": true
-        },
-        {
-            "id": 2,
-            "address": "127 Fantasy Drive",
-            "squareFootage": 1500,
-            "handicapAccesible": false
-        }
-    ],
-    "employees": [],
-    "productTypes": [
-        {
-            "id": 1,
-            "name": "Hard Candy"
-        },
-        {
-            "id": 2,
-            "name": "Gum"
-        },
-        {
-            "id": 3,
-            "name": "Chocolate"
-        },
-        {
-            "id": 4,
-            "name": "Sodas"
-        }
-    ],
-    "customers": []
+  "products": [
+    {
+      "id": 1,
+      "name": "Double Bubble",
+      "price": 2.5,
+      "productTypeId": 2
+    },
+    {
+      "id": 2,
+      "name": "Snickers",
+      "price": 3.5,
+      "productTypeId": 3
+    },
+    {
+      "id": 3,
+      "name": "Barq's",
+      "price": 3,
+      "productTypeId": 4
+    },
+    {
+      "id": 4,
+      "name": "Senior Candy",
+      "price": 1,
+      "productTypeId": 1
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "address": "151 Honey Lane",
+      "squareFootage": 1100,
+      "handicapAccesible": true
+    },
+    {
+      "id": 2,
+      "address": "127 Fantasy Drive",
+      "squareFootage": 1500,
+      "handicapAccesible": false
+    }
+  ],
+  "employees": [],
+  "productTypes": [
+    {
+      "id": 1,
+      "name": "Hard Candy"
+    },
+    {
+      "id": 2,
+      "name": "Gum"
+    },
+    {
+      "id": 3,
+      "name": "Chocolate"
+    },
+    {
+      "id": 4,
+      "name": "Sodas"
+    }
+  ],
+  "customers": [
+    {
+      "email": "mrjm2005@yahoo.com",
+      "password": "abcd123",
+      "name": "Matthew Machurek",
+      "id": 1
+    }
+  ]
 }
