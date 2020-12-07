@@ -4,6 +4,8 @@ import { NavBar } from "./nav/NavBar"
 import { ApplicationViews } from "./ApplicationViews"
 import "./locations/Location.css"
 import "./products/Product.css"
+import { Login } from "./auth/Login"
+import { Register } from "./auth/Register"
 
 export const KandyKorner = () => (
     <>
@@ -19,5 +21,7 @@ export const KandyKorner = () => (
                 return <Redirect to="/login" />
             }
         }} />
+        <Route path="/login" render={props => <Login {...props} />} />
+        <Route path="/register" render={props => <Register {...props} />} />
     </>
 )

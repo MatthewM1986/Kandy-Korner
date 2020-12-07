@@ -5,7 +5,7 @@ import { LocationProvider } from "./locations/LocationProvider"
 import { ProductList } from "./products/ProductList"
 import { ProductProvider } from "./products/ProductProvider"
 
-export const KandyKorner = (props) => {
+export const ApplicationViews = (props) => {
     return (
         <>
             <h1>Nashville Kennels</h1>

@@ -2,8 +2,9 @@ import React, { useContext, useEffect } from "react"
 import { LocationContext } from "./LocationProvider"
 import { LocationHTML } from "./Location"
 import "./Location.css"
+import { Link } from "react-router-dom"
 
-export const LocationList = () => {
+export const LocationList = (props) => {
     // This state changes when `getLocations()` is invoked below
     const { locationsArray, getLocations } = useContext(LocationContext)
     /*
@@ -35,7 +36,7 @@ export const LocationList = () => {
                 {
                     locationsArray.map(loc => {
                         return <Link key={loc.id} to={`/locations/${loc.id}`} >
-                            <h3>{locationLoc.name}</h3>
+                            <h3>{loc.name}</h3>
                         </Link>
                     })
                 }
